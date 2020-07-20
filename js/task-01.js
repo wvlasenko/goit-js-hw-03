@@ -10,12 +10,12 @@ user.hobby = 'skydaving';
 user.premium = false;
 
 const keys = Object.keys(user);
-/* Use for of */
+/* Used for of */
 for (const key of keys) {
   console.log(`${key} : ${user[key]}`);
 }
 
-/* Use for in without Object.keys */
+/* Used for in without Object.keys */
 console.log('____________________________');
 
 for (const key in user) {
