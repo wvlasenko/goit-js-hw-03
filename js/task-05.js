@@ -12,7 +12,8 @@ const getAllPropValues = function (arr, prop) {
     const arreyOfProducts = arr[i];
     if (arreyOfProducts[prop] === undefined) {
       console.log('Продукт не обладает таким свойством');
-      return arreyOfproperties;
+      // return arreyOfproperties;
+      continue;
     }
     arreyOfproperties.push(arreyOfProducts[prop]);
   }

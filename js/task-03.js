@@ -1,10 +1,11 @@
 'use strict';
 /*Если  в массиве со значениями найдем индекс наибольшего значения 
 то в массиве с ключами по тому же индексу будет искомое имя работника */
+
+/* Vatiant  by used Object.keys and Object.values*/
 const findBestEmployee = function (employees) {
   const employeeList = Object.keys(employees);
   const worksDoneList = Object.values(employees);
-  let bestEmploeeIndex;
   let maxDoneWorksIndex;
   let doneWorks = 0;
   for (let i = 0; i < worksDoneList.length; i += 1) {
@@ -12,11 +13,26 @@ const findBestEmployee = function (employees) {
     if (doneWorks < maxDoneWorks) {
       maxDoneWorksIndex = i;
       doneWorks = maxDoneWorks;
-      bestEmploeeIndex = maxDoneWorksIndex;
+      const bestEmploeeIndex = maxDoneWorksIndex;
     }
   }
   return employeeList[maxDoneWorksIndex];
 };
+/* Vatiant  by used Object.entries*/
+// const findBestEmployee = function (employees) {
+//   const employeeList = Object.entries(employees);
+//   let bestEmploeeIndex;
+//   let doneWorks = 0;
+//   for (let i = 0; i < employeeList.length; i += 1) {
+//     const bestEmploee = employeeList[i];
+//     if (doneWorks < bestEmploee[1]) {
+//       bestEmploeeIndex = i;
+//       doneWorks = bestEmploee[1];
+//     }
+//   }
+//   return employeeList[bestEmploeeIndex];
+// };
+
 console.log(
   findBestEmployee({
     ann: 29,
