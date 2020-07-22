@@ -13,7 +13,6 @@ const calculateTotalPrice = function (allProdcuts, productName) {
       return totalPrice;
     }
   }
-  // console.log(`Товара с названием ${productName} нет в наличии`);
   const message = `Товара с названием ${productName} нет в наличии`;
   return message;
 };

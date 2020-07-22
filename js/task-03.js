@@ -7,6 +7,7 @@ const findBestEmployee = function (employees) {
   const employeeList = Object.keys(employees);
   const worksDoneList = Object.values(employees);
   let maxDoneWorksIndex;
+  let bestEmploeeIndex;
   let doneWorks = 0;
   for (let i = 0; i < worksDoneList.length; i += 1) {
     const maxDoneWorks = worksDoneList[i];

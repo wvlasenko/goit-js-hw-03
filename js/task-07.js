@@ -8,7 +8,6 @@ const account = {
       amount,
       id: this.transactions.length,
     };
-    // console.log(transaction);
     return transaction;
   },
 
@@ -18,7 +17,6 @@ const account = {
     this.transactions.push(transaction);
     const message = `На Ваш счет зачислено ${amount} грн.`;
     return message;
-    // console.log(message);
   },
   withdraw(amount) {
     if (this.balance < amount) {
@@ -30,19 +28,16 @@ const account = {
       this.transactions.push(transaction);
       const message = `С Вашего счета снято ${amount} грн.`;
       return message;
-      // console.log(message);
     }
   },
   getBalance() {
     const message = `На Вашем счету ${this.balance} грн.`;
     return message;
-    // return this.balance;
   },
   getTransactionDetails(id) {
     for (let i = 0; i < this.transactions.length; i += 1) {
       const idToFind = this.transactions[i];
       if (idToFind.id === id) {
-        // console.log(idToFind);
         return idToFind;
       }
     }
@@ -53,7 +48,6 @@ const account = {
     let totalTransaction = 0;
     for (let i = 0; i < this.transactions.length; i += 1) {
       const typeToFind = this.transactions[i];
-      // console.log(typeToFind);
       if (typeToFind.type === type) {
         totalTransaction += typeToFind.amount;
       }
